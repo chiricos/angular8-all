@@ -1,0 +1,9 @@
+<h2>Lista de productos dia 18</h2>
+
+<h3>Cantidad de productos comprados {{productoServicio.productosComprados}}</h3>
+
+<div *ngFor="let product of getProductos(); let i = index;" class="products"> 
+  <app-producto [product]="product" [i]="i" (cantidadComprados)="aumentarCantidadComprados($event)"></app-producto>
+</div>
+
+<button (click)="verProductosComponent()">Ver porductos</button>
